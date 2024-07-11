@@ -1,0 +1,16 @@
+{
+  "name": "gh_deploy",
+  "version": "1.0.0",
+  "description": "Comando para atualizar versao do package, criar tag e commit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "open": "^8.4.2",
+    "semver": "^7.6.2"
+  }
+}
