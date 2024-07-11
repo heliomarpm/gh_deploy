@@ -2,11 +2,11 @@ const { writeFile } = require('fs/promises')
 const { resolve } = require('path')
 const open = require('open')
 
-const { extractOwnerAndRepoFromGitRemoteURL } = require('./modules/release/utils')
-const { checkValidations } = require('./modules/release/validations')
-const packageJSON = require('package.json')
+const { extractOwnerAndRepoFromGitRemoteURL } = require('./src/modules/release/utils')
+const { checkValidations } = require('./src/modules/release/validations')
+const packageJSON = require('../../package.json')
 const { question, exec } = require('./src/utils')
-const { COLORS } = require('./constants')
+const { COLORS } = require('./src/constants')
 
 async function makeRelease(commitAndPush = true) {
     console.clear()

@@ -1,6 +1,6 @@
 const semver = require('semver')
 
-const { COLORS } = require('../../../src/constants')
+const { COLORS } = require('../../../constants')
 
 exports.checkValidations = ({ version, newVersion }) => {
   if (!newVersion) {

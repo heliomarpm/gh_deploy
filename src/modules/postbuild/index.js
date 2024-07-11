@@ -1,7 +1,7 @@
 const { writeFile } = require('fs/promises')
 const { resolve } = require('path')
 
-const packageJSON = require('../../../package.json')
+const packageJSON = require('../../../../../package.json')
 const { getDevFolder } = require('../../utils')
 
 async function createPackageJSONDistVersion() {
