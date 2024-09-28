@@ -19,3 +19,8 @@ Eg.
   ...
 }
 ```
+
+## Examples
+
+- [Udeler](https://github.com/heliomarpm/udemy-downloader-gui)
+- [Electron Quick Start - VanillaJS](https://github.com/heliomarpm/electron-quick-start)
