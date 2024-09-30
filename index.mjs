@@ -4,7 +4,7 @@ import open from 'open'
 
 import { extractOwnerAndRepoFromGitRemoteURL } from './src/modules/release/utils/index.mjs'
 import { checkValidations } from './src/modules/release/validations/index.mjs'
-import packageJSON from './package.json' assert { type: 'json' };
+import packageJSON from '../../package.json' assert { type: 'json' };
 import { question, exec } from './src/utils/index.mjs'
 import { COLORS } from './src/constants/index.mjs'
 
