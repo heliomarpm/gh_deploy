@@ -3,7 +3,7 @@ Comando para atualizar versao do package, criar tag e commit
 
 ## Instalação
 
-`npm i -D github:heliomarpm/gh_deploy`
+`npm i -D github:heliomarpm/gh_deploy open semver`
 
 ## Usage
 
