@@ -1,6 +1,6 @@
-const { normalize, dirname } = require('path')
+import { normalize, dirname } from 'path'
 
-exports.getDevFolder = (path) => {
+export function getDevFolder(path) {
   const [nodeModules, devFolder] = normalize(dirname(path)).split(/\/|\\/g)
 
   return [nodeModules, devFolder].join('/')

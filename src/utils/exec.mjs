@@ -1,5 +1,5 @@
-const { execSync } = require('child_process')
-const { resolve } = require('path')
+import { execSync } from 'child_process'
+import { resolve } from 'path'
 
 function makeOptions(options) {
   return {
@@ -9,7 +9,7 @@ function makeOptions(options) {
   }
 }
 
-exports.exec = (commands, options) => {
+export function exec(commands, options) {
   const outputs = []
 
   for (const command of commands) {

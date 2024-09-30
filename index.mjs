@@ -1,12 +1,12 @@
-const { writeFile } = require('fs/promises')
-const { resolve } = require('path')
-const open = require('open')
+import { writeFile } from 'fs/promises'
+import { resolve } from 'path'
+import open from 'open'
 
-const { extractOwnerAndRepoFromGitRemoteURL } = require('./src/modules/release/utils')
-const { checkValidations } = require('./src/modules/release/validations')
-const packageJSON = require('../../package.json')
-const { question, exec } = require('./src/utils')
-const { COLORS } = require('./src/constants')
+import { extractOwnerAndRepoFromGitRemoteURL } from './src/modules/release/utils/index.mjs'
+import { checkValidations } from './src/modules/release/validations/index.mjs'
+import packageJSON from './package.json' assert { type: 'json' };
+import { question, exec } from './src/utils/index.mjs'
+import { COLORS } from './src/constants/index.mjs'
 
 async function makeRelease(commitAndPush = true) {
     console.clear()

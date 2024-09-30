@@ -1,8 +1,8 @@
-const { writeFile } = require('fs/promises')
-const { resolve } = require('path')
+import { writeFile } from 'fs/promises'
+import { resolve } from 'path'
 
-const packageJSON = require('../../../../../package.json')
-const { getDevFolder } = require('../../utils')
+import packageJSON from '../../../../../package.json'
+import { getDevFolder } from '../../utils/index.mjs'
 
 async function createPackageJSONDistVersion() {
   const { main, scripts, resources, devDependencies, ...rest } = packageJSON

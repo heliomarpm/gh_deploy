@@ -1,7 +1,7 @@
-const Readline = require('readline')
+import { createInterface } from 'readline'
 
-exports.question = (question) => {
-  const readline = Readline.createInterface({
+export function question(question) {
+  const readline = createInterface({
     input: process.stdin,
     output: process.stdout,
   })
