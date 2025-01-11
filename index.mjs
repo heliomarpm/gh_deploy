@@ -1,12 +1,14 @@
-import { writeFile } from 'fs/promises'
+import { writeFile, readFile } from 'fs/promises'
 import { resolve } from 'path'
 import open from 'open'
 
 import { extractOwnerAndRepoFromGitRemoteURL } from './src/modules/release/utils/index.mjs'
 import { checkValidations } from './src/modules/release/validations/index.mjs'
-import packageJSON from '../../package.json' assert { type: 'json' };
 import { question, exec } from './src/utils/index.mjs'
 import { COLORS } from './src/constants/index.mjs'
+
+// import packageJSON from '../../package.json' assert { type: 'json' };
+const packageJSON = JSON.parse( await readFile( new URL('../../package.json', import.meta.url) ));
 
 async function makeRelease(commitAndPush = true) {
     console.clear()
